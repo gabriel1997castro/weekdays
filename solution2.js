@@ -1,4 +1,4 @@
-const daysMap = {
+const DAYS_MAP = {
   "su": 1,
   "sun": 1,
   "sunday": 1,
@@ -27,10 +27,11 @@ const daysMap = {
 };
 
 const DAYS_ARRAY = [1, 2, 3, 4, 5, 6, 7]
+
 const handleRange = (range) => {
   const [rangeStart, rangeEnd] = range.split("-")
-  const startIndex = daysMap[rangeStart] - 1
-  const endIndex = daysMap[rangeEnd] - 1
+  const startIndex = DAYS_MAP[rangeStart] - 1
+  const endIndex = DAYS_MAP[rangeEnd] - 1
 
   const rangeDays = []
   if (endIndex > startIndex) {
@@ -50,10 +51,10 @@ function handleWeekDays(line) {
     if (item.includes("-")) {
       daysOfWeek.push(...handleRange(item))
     }
-    else daysOfWeek.push(daysMap[item])
+    else daysOfWeek.push(DAYS_MAP[item])
   })
-  return Array.from(new Set(daysOfWeek)).sort((a, b) => a - b);
 
+  return Array.from(new Set(daysOfWeek)).sort((a, b) => a - b);
 }
 
 module.exports = handleWeekDays

@@ -23,6 +23,12 @@ I wrote to solutions and I prefer solution two.
 
 ## Test
 
+First install the dependencies:
+
+```shell
+npm i
+```
+
 To test you can just run the command:
 
 ```shell

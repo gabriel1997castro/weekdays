@@ -20,7 +20,7 @@ The function should be able to handle the following.
 
 ## Two solutions
 
-I wrote to solutions and I prefer solution two.
+I wrote two solutions and I prefer solution two.
 
 ## Test
 
